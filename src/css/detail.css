@@ -1,0 +1,220 @@
+.detail-loading {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	background: url(~assets/detail-loading.png);
+	/* background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPScyNHB4JyBoZWlnaHQ9JzI0cHgnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MCIgc3Ryb2tlPSIjN2NjZmFmIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNob2Zmc2V0IiBkdXI9IjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgZnJvbT0iMCIgdG89IjUwMiI+PC9hbmltYXRlPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNoYXJyYXkiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiB2YWx1ZXM9IjE1MC42IDEwMC40OzEgMjUwOzE1MC42IDEwMC40Ij48L2FuaW1hdGU+PC9jaXJjbGU+PC9zdmc+); */
+	background-size: 100%;
+}
+
+.detail-wrapper {
+	min-height: 100vh;
+	color: #666;
+	font-size: .3rem;
+	background: #FFF;
+}
+
+.detail-banner {
+	width: 100%;
+	height: 4.22rem;
+}
+.detail-tab {
+	display: flex;
+	justify-content: space-around;
+	line-height: .88rem;
+	border-bottom: 1px solid #EEE;
+}
+
+.detail-container {
+	padding: .3rem .3rem 0;
+
+	& h1 {
+		margin-bottom: .2rem;
+		color: #333;
+		font-size: .36rem;
+		font-weight: bold;
+	}
+}
+.detail-count-info {
+	margin-bottom: .2rem;
+	font-size: .28rem;
+
+	& span {
+		color: #F5B000;
+	}
+}
+.apply {
+	color: #A5A5A5;
+	font-size: .28rem;
+}
+.detail-intro {
+	margin-top: .2rem;
+	padding: .2rem 0 1.2rem 0;
+	border-top: 1px solid #EEE;
+
+	& h4 {
+		padding-left: .2rem;
+		margin-bottom: .12rem;
+		position: relative;
+		color: #333;
+		font-size: .32rem;
+
+		&::before {
+			content: "";
+			width: .06rem;
+			height: 80%;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			background-color: #00D3DD;
+			transform: translateY(-50%);
+		}
+	}
+
+	& p {
+		line-height: 1.6;
+		word-wrap: break-word;
+	}
+
+	& img {
+		width: 100%;
+	}
+}
+
+.testing-btn {
+	width: 7.5rem;
+	position: fixed;
+	left: 50%;
+	bottom: 0;
+	font-size: .32rem;
+	line-height: 1rem;
+	background: linear-gradient(to right, #00C3CC, #05D0CA);
+	transform: translateX(-50%);
+	background:#0ba8f0;
+}
+
+
+.detail-comment {
+	padding-bottom: 1rem;
+}
+.comment-list {
+	padding: 0 .3rem;
+}
+.comment-item {
+	padding: .3rem 0;
+	border-bottom: 1px solid #EEE;
+}
+.comment-item:last-child {
+	border-bottom: none;
+}
+.comment-info {
+	display: flex;
+
+	& img {
+		width: .6rem;
+		height: .6rem;
+		margin-right: .2rem;
+		border-radius: 50%;
+	}
+
+	& div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	& .nickname {
+		color: #666;
+		font-size: .24rem;
+	}
+
+	& .time {
+		color: #999;
+		font-size: .22rem;
+	}
+}
+.comment-content {
+	margin-top: .2rem;
+	color: #333;
+	font-size: .3rem;
+	line-height: 1.4;
+}
+
+.like-comment-wrapper {
+	width: 100%;
+	padding: .14rem .3rem;
+	position: fixed;
+	left: 50%;
+	bottom: 0;
+	border-top: 1px solid #EEE;
+	box-sizing: border-box;
+	background-color: #FFF;
+	transform: translateX(-50%);
+}
+.like-comment {
+	padding-left: .2rem;
+	color: #999;
+	font-size: .3rem;
+	line-height: .72rem;
+	border-radius: .16rem;
+	background-color: #FAF9F9;
+}
+
+.g-btn-wrapper {
+	display: flex;
+	position: fixed;
+	top: .2rem;
+	right: 0;
+}
+.collect-btn {
+	width: .8rem;
+	height: .8rem;
+	margin-right: .2rem;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	background: #FFF url(~assets/shou.png) center no-repeat;
+	background-size: 55%;
+}
+.detail-name{
+	font-size: 0.35rem;
+	font-weight:bold;
+	color: #0ba8f0;
+}
+.collect-btn.dactived {
+	background-image: url(~assets/shou-actived.png);
+}
+.collect-btn.disabled {
+	pointer-events: none;
+}
+.detail-share-btn {
+	width: .8rem;
+	height: .8rem;
+	margin-right: .2rem;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	background: #FFF url(~assets/share.png) center no-repeat;
+	background-size: 55%;
+}
+
+.d-btn-wrapper {
+	display: flex;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	line-height: 1rem;
+	border-top: 1px solid #EEE;
+	background-color: #FFF;
+
+	& .btn {
+		flex: 1;
+		color: #666;
+		font-size: .28rem;
+	}
+
+	& .view-btn {
+		color: #FFF;
+		background-image: linear-gradient(to right, #00C3CC, #05D0CA);
+	}
+}

@@ -1,0 +1,76 @@
+.progress-bar {
+	height: .04rem;
+	position: fixed;
+	top: 0;
+	background-color: #F5B000;
+	transition: all .3s;
+}
+
+.topic-title {
+	margin: .48rem auto .3rem;
+	background-color: #FFF;
+
+	& p {
+		padding: .3rem .4rem;
+		color: #333;
+		font-size: .36rem;
+	}
+
+	& i {
+		margin-right: .1rem;
+		color: #A5A5A5;
+		font-size: .24rem;
+	}
+
+	& span {
+		line-height: 1.5;
+	}
+
+	& img {
+		width: 100%;
+		height: 4.22rem;
+	}
+}
+
+.topic-list {
+	padding: 0 .24rem;
+	background-color: #FFF;
+
+	& li {
+		padding: .32rem .2rem;
+		color: #333;
+		font-size: .3rem;
+		line-height: 1.5;
+		border-bottom: 1px solid #DDD;
+	}
+
+	& li:last-child {
+		border-bottom: none;
+	}
+
+	& li.selected {
+		color: #00D3DD;
+	}
+
+	& img {
+		width: 100%;
+		height: 3.68rem;
+		margin: .32rem auto 0;
+	}
+}
+
+.topic .btn-wrapper {
+	margin: .5rem .7rem;
+}
+.pre-btn, .submit-btn {
+	flex: 1;
+	font-size: .3rem;
+	border-radius: 8px;
+	line-height: .8rem;
+	color: #00D3DD;
+	border: 1px solid;
+	background-color: #FFF;
+}
+.pre-btn {
+	margin-right: .4rem;
+}
