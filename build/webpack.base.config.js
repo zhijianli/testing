@@ -67,7 +67,8 @@ module.exports = {
             name: "[name]",
             prefixze: true
           }
-        }, {
+      },
+      {
           loader: "svgo-loader",
           options: {
             plugins: [
@@ -83,7 +84,13 @@ module.exports = {
                 { removeEmptyText: true }
             ]
           }
-        }]
+        }
+        // ,
+        // {
+        //     test: /\.less$/,
+        //     loader: "style-loader!css-loader!less-loader",
+        // }
+      ]
       },
       {
         test: /\.css$/,

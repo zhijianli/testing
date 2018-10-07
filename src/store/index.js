@@ -15,36 +15,32 @@ export function createStore () {
         prefix: process.env.NODE_ENV === 'production' ? 'https://image-testscale.oss-cn-hangzhou.aliyuncs.com/' : 'https://image-testscale.oss-cn-hangzhou.aliyuncs.com/',
     	//prefix: "https://oml9ntix5.qnssl.com/",
         suffix: "",
-
         banner: [],
-    	nav: [],
-    	choiceTestingList: [],
-    	hotTestingList: [],
-
-    	classify: [],
-    	testingList: [],
-
+    	  nav: [],
+    	  choiceTestingList: [],
+    	  hotTestingList: [],
+    	  classify: [],
+    	  testingList: [],
         testingDetailIsTesting: false,
         testingDetail: {},
-    	testingDetailCollect: 0,
+    	  testingDetailCollect: 0,
         testingDetailComment: {
             count: 0,
             commonCommentList: []
         },
-
         testingRubric: [],
-
         result: {
             tsqMessage: {}
         },
         resultComment: [],
         testingResultHotTestingList: [],
-
         profileCount: 1,
         profileCountCollect: 1,
         profileLoaded: false,
         profileTestingList: [],
-        profileCollectTestingList: []
+        profileCollectTestingList: [],
+        //此变量标明用户目前在哪个页面，1表示首页，2表示分类页，3表示我的页面。
+        displayPage:1
     },
     actions,
     mutations,

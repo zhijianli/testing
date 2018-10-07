@@ -18,6 +18,11 @@
 		<div class="classify-loading" v-if="loading"></div>
 
 		<!-- <no-data v-if="noData && ! loading"></no-data> -->
+
+		<!-- 撑开Fixednav挡住的位置 -->
+		<div class="space"></div>
+		<!-- 固定导航栏 -->
+		<fixednav></fixednav>
 	</div>
 </template>
 
@@ -28,6 +33,7 @@
 
 	import noData from "components/no-data"
 	import testingItem from "components/testing-item"
+	import fixednav from 'components/fixed-nav'
 
 	export default {
 		data() {
@@ -44,7 +50,8 @@
 		},
 		components: {
 			noData,
-			testingItem
+			testingItem,
+			fixednav
 		},
 		asyncData({store}) {
 			return store.dispatch("getClassifyData").catch((error) => {

@@ -48,6 +48,10 @@
           margin-left: auto;
       }
     }
+    .space{
+    	width:10rem;
+    	height:1.2rem;
+    }
 </style>
 <template>
     <div id="app">
@@ -78,6 +82,11 @@
             </ul>
         </div>
         <div class="home-loading" v-if="loading"></div>
+
+        <!-- 撑开Fixednav挡住的位置 -->
+        <div class="space"></div>
+        <!-- 固定导航栏 -->
+        <fixednav></fixednav>
     </div>
 </template>
 
@@ -86,6 +95,7 @@
     import {getURLParams} from "utils"
 
     import {mapState} from "vuex"
+    import fixednav from 'components/fixed-nav';
 //    import testingItem from "components/testing-item"
 
     export default {
@@ -101,9 +111,10 @@
 //            ... mapState(["uid", "classify", "testingList"]),
             ... mapState(["uid", "classify","prefix", "suffix"]),
         },
-//        components: {
-//            testingItem,
-//        },
+       components: {
+           // testingItem,
+           fixednav
+       },
 //        asyncData({store}) {
 //            return store.dispatch("getClassifyData").catch((error) => {
 //                console.error(error)
@@ -111,6 +122,8 @@
 //        },
         beforeMount() {
             sessionStorage.setItem("type", "self");
+            this.$store.state.uid = 12;//测试的时候先写死
+            console.log(this.uid+"=================");
             if (this.uid) {
 
                 document.cookie = `mid=${this.uid}; expires=${new Date(Date.now() + (30 * 24 * 60 * 60 * 1000)).toUTCString()}; path=/`
@@ -168,17 +181,25 @@
                 })
             },
             async getUserInfo() {
-                const data = await getResponseGeneral("depression/api/getMemberByMid.json", {
-                    mid: this.uid
-                })
+                // const data = await getResponseGeneral("depression/api/getMemberByMid.json", {
+                //     mid: this.uid
+                // })
+                //
+                // if (data.code === 0) {
+                //     this.$root.user = {
+                //         uid: this.uid,
+                //         avatar: data.avatar,
+                //         nickname: data.nickname,
+                //         phone: data.mobilePhone
+                //     }
+                // }
 
-                if (data.code === 0) {
-                    this.$root.user = {
-                        uid: this.uid,
-                        avatar: data.avatar,
-                        nickname: data.nickname,
-                        phone: data.mobilePhone
-                    }
+                //测试的时候先写死
+                this.$root.user = {
+                      uid: 12,
+                      avatar: "touxiang",
+                      nickname: "mocui",
+                      phone: "135656565"
                 }
             }
         }

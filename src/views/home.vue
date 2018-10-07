@@ -48,6 +48,13 @@
 		<div class="home-loading" v-if="loading"></div>
 
 		<div class="my-btn" @click="go" v-if="uid"></div>
+
+
+		<!-- 撑开Fixednav挡住的位置 -->
+    <div class="space"></div>
+    <!-- 固定导航栏 -->
+    <fixednav></fixednav>
+
 	</div>
 </template>
 
@@ -62,6 +69,7 @@
 	import hotTestingItem from "components/hot-testing-item"
 	import hotTestingItemBroadcast from "components/hot-testing-item-broadcast"
 	import flyIscroll from "components/fly-iscroll"
+	import fixednav from 'components/fixed-nav';
 
 	// import Swiper from "swiper"
 	import "swiper/dist/css/swiper.min.css"
@@ -80,7 +88,8 @@
 			testingItem,
 			hotTestingItem,
 			hotTestingItemBroadcast,
-			flyIscroll
+			flyIscroll,
+			fixednav
 		},
 		asyncData({store}) {
 			return store.dispatch("getHomeData").catch((error) => {
