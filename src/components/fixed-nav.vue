@@ -30,7 +30,7 @@
       </span>
     </router-link>
 
-    <router-link to="/selftest">
+    <router-link to="/profile">
       <span class="one_fixed_nav" @click="$store.state.displayPage = 3">
         <!-- <svg v-if="returnPageNow == 'myzone'">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile.dbc5ebf"></use>
