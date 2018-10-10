@@ -11,23 +11,17 @@
 
 		<slot name="footer"></slot>
 
-		<!-- 撑开Fixednav挡住的位置 -->
-		<div class="space"></div>
-		<!-- 固定导航栏 -->
-		<fixednav></fixednav>
+
 
 	</li>
 </template>
 
 <script>
 	import {mapState} from "vuex"
-	import fixednav from 'components/fixed-nav'
+
 	export default {
 		props: ["item", "type"],
 		computed: mapState(["prefix", "suffix"]),
-		components: {
-			fixednav
-		},
 		methods: {
 			go(id) {
 				if (this.type === 1) {

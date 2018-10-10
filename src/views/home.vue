@@ -97,10 +97,13 @@
 			})
 		},
 		beforeMount() {
+			//测试的时候先写死是12
+			this.$store.state.uid = 12;
+			console.log(this.uid+"|||||||||||||||||||||");
+
 			if (this.uid) {
-
 				document.cookie = `mid=${this.uid}; expires=${new Date(Date.now() + (30 * 24 * 60 * 60 * 1000)).toUTCString()}; path=/`
-
+        //测试的时候先注释掉，等重新写好getMemberByMid.json的接口就可以去掉注释
 				// this.getUserInfo()
 			}
 
