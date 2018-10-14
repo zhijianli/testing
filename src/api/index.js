@@ -42,8 +42,10 @@ export function getResponse(url, params = {}) {
 export function getResponseGeneral(url, params = {}) {
 	// const host = 'http://api.120xinmao.com'  //'http://192.168.0.247:8080'
 	// const host = 'http://192.168.0.247:8080'  //'http://192.168.0.247:8080'
-                 const host = 'http://127.0.0.1:8080'
-	const urlPrefix = typeof window === "object" ? "/depression-api/" : `${host}/depression-api/`
+  // const host = 'http://127.0.0.1:8080'
+  const host = 'http://moluantongxue.com:9000/'
+	// const urlPrefix = typeof window === "object" ? "/" : `${host}/`
+  const urlPrefix = host
 
 	return axios.post(urlPrefix + url, serialize(params)).then((response) => {
 		if (response.status === 200) {

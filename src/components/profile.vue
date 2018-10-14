@@ -154,16 +154,13 @@ export default {
     },
     check() {
       const re = /(\d{4})-(\d{1,2})-(\d{1,2})/;
-
       if (!this.sex) {
         this.$toast("请选择性别");
-
         return;
       }
 
       if (!re.test(this.birthday)) {
         this.$toast("请输入正确的生日格式");
-
         return;
       }
 
@@ -172,31 +169,24 @@ export default {
       this.birthday.replace(re, (match, year, month, day) => {
         if (year < 1900) {
           this.$toast("年份太少");
-
           open = true;
-
           return;
         }
 
         if (year > new Date().getFullYear()) {
           this.$toast("年份太大");
-
           open = true;
-
           return;
         }
 
         if (month > 12) {
           this.$toast("月份不能大于 12");
-
           open = true;
-
           return;
         }
 
         if (day > 31) {
           this.$toast("日期不能大于 31");
-
           open = true;
         }
       });
@@ -212,10 +202,10 @@ export default {
         birthday: this.birthday.replace(/-/g, "/"),
         relateTestScaleId: this.$route.params.id,
         sex: this.sex === 1 ? "man" : "woman",
-        //telephone: this.$root.user.phone,
-        tsotListStr: JSON.stringify(this.arr)
-        //userId: this.$root.user.uid,
-        //userName: this.$root.user.nickname
+        // telephone: this.$root.user.phone === null ? "" : this.$root.user.phone,
+        tsotListStr: JSON.stringify(this.arr),
+        userId: this.$root.user.uid,
+        userName: this.$root.user.nickname
       };
 
       if (this.$root.user) {
@@ -236,7 +226,6 @@ export default {
 
       if (data.code === 0) {
         this.$router.push(`/result/${data.testScaleOrderId}`);
-
         return;
       }
 

@@ -253,6 +253,7 @@ export default {
       }
       this.$store.commit("setUid", parameter.uid);
     }
+    
     if (!this.$root.user && this.uid) {
       this.getUserInfo();
     }
@@ -266,12 +267,12 @@ export default {
     }
   },
   mounted() {
+
     this.isAPP = navigator.userAgent.match(/xinmao/);
     this.$store
       .dispatch("getResultData", this.$route.params.id)
       .then(() => {
         //this.loading = false
-
         this.getShareDetail();
       })
       .catch(error => {

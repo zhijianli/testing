@@ -300,15 +300,13 @@
 				const isIOS = /iPhone/i.test(ua)
 				const isAndroid = /Android/i.test(ua)
 
-				if (! this.uid) {
+				if (!this.uid) {
 					if (this.isAPP) {
-
 						if (isAndroid) {
 							window.Android.needLogin()
 						} else {
 							window.webkit.messageHandlers.NeedLogin.postMessage('login')
 						}
-
 					} else {
 						const isWX = navigator.userAgent.match(/MicroMessenger/i)
 
@@ -320,8 +318,13 @@
 							location.href = `/signup?next=${encodeURIComponent(location.href)}`
 						}
 					}
-
+					
 					return
+				}else{
+
+					//如果uid为空，跳转到登录页面
+					this.$router.push(`/login`)
+
 				}
 
 				this.$router.push(`/topic/${this.$route.params.id}`)

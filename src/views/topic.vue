@@ -92,7 +92,7 @@
 			// }
 
 			if (this.uid) {
-				! this.$root.user && this.getUserInfo()
+				!this.$root.user && this.getUserInfo()
 			}
 
 			this.$store.dispatch("getTestingRubric", this.$route.params.id).then(() => {
@@ -117,7 +117,7 @@
 				}
 			},
 			async getUserInfo() {
-				const data = await getResponseGeneral("depression/api/getMemberByMid.json", {
+				const data = await getResponseGeneral("userOperationCenter/memberWechat/getMemberByMid.json", {
 					mid: this.uid
 				})
 

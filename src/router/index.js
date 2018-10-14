@@ -9,6 +9,7 @@ import Topic from "views/topic"
 import Result from "views/result"
 import Selftest from "views/selftest"
 import Profile from "views/profile"
+import Login from "views/login"
 
 // import IScrollView from "vue-iscroll-view"
 // import IScroll from "iscroll"
@@ -55,6 +56,10 @@ export function createRouter() {
         path: "/selftest",
         component: Selftest
       },
+			{
+				path: "/login",
+				component: Login
+			},
 			{
 				path: "*",
 				component: NotFoundComponent

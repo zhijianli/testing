@@ -127,10 +127,10 @@ export default {
 	},
 
 	getResultData({commit}, id) {
-		return Promise.all([getResponse("orderCenter/testScaleOrder/getTestResultMessage", {testScaleOrderId: id}), getResponse("testCenter/testScaleInfo/getRecommendTestScale", {testScaleOrderId: id})]).then(([a, b]) => {
+		return Promise.all([getResponse("orderCenter/testScaleOrder/getTestResultMessage", {testScaleOrderId: id}),
+		                    getResponse("testCenter/testScaleInfo/getRecommendTestScale", {testScaleOrderId: id})]).then(([a, b]) => {
 			commit("setTestingResult", a.testScaleOrderMessage)
 			commit("setTestingResultHotTestingList", b.recommendTestScaleList)
-
 			getResponse('userOperationCenter/commonComment/getAllMessage', {
 				articleId: a.testScaleOrderMessage.relateTestScaleId,
 				pageIndex: 1,
@@ -138,11 +138,9 @@ export default {
 			}).then((data) => {
 				commit('setTestingResultComment', data)
 			})
-
 			return a
 		}).catch((error) => {
 			console.error(error)
-
 			return Promise.reject(error)
 		})
 	},

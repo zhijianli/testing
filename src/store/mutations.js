@@ -7,7 +7,6 @@ export default {
 	setUid(state, value) {
 		state.uid = value
 	},
-
 	setBanner(state, list) {
 		state.banner = list
 	},
@@ -20,14 +19,12 @@ export default {
 	setHotTestingList(state, list) {
 		state.hotTestingList = list
 	},
-
 	setClassify(state, list) {
 		state.classify = list
 	},
 	setTestingList(state, list) {
 		state.testingList = list
 	},
-
 	setTestingDetail(state, detail) {
 		state.testingDetail = detail
 	},
@@ -46,11 +43,9 @@ export default {
 			commonCommentList: [value, ... state.testingDetailComment.commonCommentList]
 		}
 	},
-
 	setTestingRubric(state, data) {
 		state.testingRubric = data
 	},
-
 	setTestingResult(state, result) {
 		state.result = result
 	},
@@ -60,7 +55,6 @@ export default {
 	setTestingResultHotTestingList(state, list) {
 		state.testingResultHotTestingList = list
 	},
-
 	setProfileLoaded(state, value) {
 		state.profileLoaded = value
 	},
