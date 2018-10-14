@@ -301,34 +301,28 @@
 				const isAndroid = /Android/i.test(ua)
 
 				if (!this.uid) {
-					if (this.isAPP) {
-						if (isAndroid) {
-							window.Android.needLogin()
-						} else {
-							window.webkit.messageHandlers.NeedLogin.postMessage('login')
-						}
-					} else {
-						const isWX = navigator.userAgent.match(/MicroMessenger/i)
-
-						//this.getOpenID()
-						//return
-						if (isWX) {
-							this.getOpenID()
-						} else {
-							location.href = `/signup?next=${encodeURIComponent(location.href)}`
-						}
-					}
-					
-					return
-				}else{
-
+					// if (this.isAPP) {
+					// 	if (isAndroid) {
+					// 		window.Android.needLogin()
+					// 	} else {
+					// 		window.webkit.messageHandlers.NeedLogin.postMessage('login')
+					// 	}
+					// } else {
+					// 	const isWX = navigator.userAgent.match(/MicroMessenger/i)
+					//
+					// 	//this.getOpenID()
+					// 	//return
+					// 	if (isWX) {
+					// 		this.getOpenID()
+					// 	} else {
+					// 		location.href = `/signup?next=${encodeURIComponent(location.href)}`
+					// 	}
+					// }
 					//如果uid为空，跳转到登录页面
 					this.$router.push(`/login`)
-
+				}else{
+				  this.$router.push(`/topic/${this.$route.params.id}`)
 				}
-
-				this.$router.push(`/topic/${this.$route.params.id}`)
-
 			},
 			async getUserInfo() {
 				try {
