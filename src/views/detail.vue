@@ -326,7 +326,7 @@
 			},
 			async getUserInfo() {
 				try {
-					const data = await getResponseGeneral("depression/api/getMemberByMid.json", {
+					const data = await getResponseGeneral("userOperationCenter/memberWechat/getMemberByMid.json", {
 						mid: this.uid
 					})
 

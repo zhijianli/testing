@@ -47,7 +47,7 @@
 
 		<div class="home-loading" v-if="loading"></div>
 
-		<div class="my-btn" @click="go" v-if="uid"></div>
+		<!-- <div class="my-btn" @click="go" v-if="uid"></div> -->
 
 
 		<!-- 撑开Fixednav挡住的位置 -->
@@ -131,7 +131,7 @@
 				this.$router.push('/profile')
 			},
 			async getUserInfo() {
-				const data = await getResponseGeneral("depression/api/getMemberByMid.json", {
+				const data = await getResponseGeneral("userOperationCenter/memberWechat/getMemberByMid.json", {
 					mid: this.uid
 				})
 

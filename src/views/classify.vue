@@ -5,7 +5,7 @@
 		<header class="classify-header-wrapper">
 			<div class="classify-header-scroll-wrapper">
 				<div class="classify-header">
-					<span :class="{actived: currentClassify === 0}" @click="selectClassify(0)">最新</span>
+					<span :class="{actived: currentClassify === 0}" @click="selectClassify(0)">全部</span>
 					<span :class="{actived: currentClassify === item.id}" v-text="item.name" v-for="item of classify" @click="selectClassify(item.id)"></span>
 				</div>
 			</div>

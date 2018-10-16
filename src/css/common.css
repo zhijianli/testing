@@ -18,7 +18,8 @@ body {
 	overflow:hidden;
 	font-size: .28rem;
 	font-family: Helvetica Neue, Tahoma, Arial, PingFangSC-Regular, Hiragino Sans GB, Microsoft Yahei, sans-serif;
-	background-color: #F5F5F5;
+	/* background-color: #F5F5F5; */
+	background-color: #FFFFFF;
 }
 
 h1, h2, h3, h4, h6 {
@@ -105,7 +106,8 @@ a {
 }
 
 .actived {
-	color: #00CBD4;
+	/* color: #00CBD4; */
+  color: #0ba8f0;
 	position: relative;
 }
 .actived::after {

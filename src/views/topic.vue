@@ -2,11 +2,11 @@
 
 <template>
 	<div id="app" class="topic">
+	  <div class="complete-number">	{{index + 1}}/{{testingRubric.length}} 	</div>
 		<div class="progress-bar" :style="{width: width}"></div>
 
 		<div class="topic-title">
 			<p>
-				{{index + 1}}<i>/{{testingRubric.length}}</i>
 				<span v-text="obj.problemWord"></span>
 			</p>
 			<img :src="prefix + obj.problemPicSrc + suffix" v-if="obj.problemPicSrc">
@@ -53,7 +53,7 @@
 				if (! this.testingRubric) {
 					return 0
 				}
-				return `${(this.index + 1) / this.testingRubric.length * 100}%`
+				return `${(this.index + 1) / this.testingRubric.length * 100*0.8}%`
 			},
 			obj() {
 				return this.testingRubric[this.index] || {}

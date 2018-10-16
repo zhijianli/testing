@@ -1,8 +1,11 @@
 <template>
 	<div id="app">
+		<div>
+			<img class="topImage" src="https://image-testscale.oss-cn-hangzhou.aliyuncs.com/background.png">
+		</div>
 		<div class="profile-tab">
-			<div class="btn" :class="{selected: index === 0}" @click="index = 0">我测过的</div>
-			<div class="btn" :class="{selected: index === 1}" @click="index = 1">我收藏的</div>
+			<div class="btn" :class="{selected: index === 0}" @click="index = 0">已完成</div>
+			<div class="btn" :class="{selected: index === 1}" @click="index = 1">已收藏</div>
 		</div>
 
 		<ul class="testing-list sdasdas" v-if="index === 0">
@@ -101,6 +104,12 @@
 </script>
 
 <style scoped>
+.topImage {
+  width: 100%;
+	height: 3rem;
+
+
+}
 .profile-tab {
 	display: flex;
 	justify-content: space-around;
@@ -115,7 +124,8 @@
 
 	& .selected {
 		position: relative;
-		color: #00D3DD;
+		/* color: #00D3DD; */
+		color: #0ba8f0;
 
 		&::after {
 			content: "";

@@ -12,7 +12,8 @@
 
   & .warning {
     margin: 0.3rem 0 0.2rem;
-    color: #ff5b05;
+    /* color: #ff5b05; */
+    color: #0ba8f0;
     font-size: 0.28rem;
   }
 
@@ -79,25 +80,26 @@
   bottom: 0;
   font-size: 0.32rem;
   line-height: 1rem;
-  background: linear-gradient(to right, #00c3cc, #05d0ca);
+  /* background: linear-gradient(to right, #00c3cc, #05d0ca); */
+  background-color: #0ba8f0;
   transform: translateX(-50%);
 }
 </style>
 
 <template>
 	<div class="profile">
-		<p class="warning">测试结果会因性别、年龄不同而不同！</p>
+		<p class="warning">性别、生日将使您的测试结果更准确</p>
 
 		<ul class="profile-list">
 			<li @click="sexModalStatus = true">
-				你的性别
+				性别
 				<span :class="{'no-selected': ! sex}">{{sex | format}}</span>
 			</li>
 			<li @click="openDatePicker">
-				出生日期
+				生日
 				<input type="text" readonly placeholder="请输入生日 格式 1991-12-18" v-model="birthday">
 			</li>
-			<mt-datetime-picker ref="picker" type="date" :startDate="new Date(1950,0,1)" @confirm="handleConfirm">
+			<mt-datetime-picker ref="picker" type="date" :startDate="new Date(1990,0,1)" @confirm="handleConfirm">
 			</mt-datetime-picker>
 		</ul>
 
@@ -106,7 +108,7 @@
 		<transition name="modal">
 			<div class="modal" v-if="sexModalStatus" @click="sexModalStatus = false" @touchmove.prevent>
 				<ul class="modal-list">
-					<li>选择性别</li>
+					<li>请选择性别</li>
 					<li @click="selectItem(1)">男</li>
 					<li @click="selectItem(2)">女</li>
 				</ul>
@@ -124,7 +126,7 @@ export default {
   props: ["arr"],
   data() {
     return {
-      birthday: "1950-01-01",
+      birthday: "1990-01-01",
 
       sex: 0,
       sexModalStatus: false

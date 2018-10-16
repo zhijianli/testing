@@ -215,6 +215,7 @@
 
 	& .view-btn {
 		color: #FFF;
-		background-image: linear-gradient(to right, #00C3CC, #05D0CA);
+		background-color: #0ba8f0;
+		/* background-image: linear-gradient(to right, #00C3CC, #05D0CA); */
 	}
 }

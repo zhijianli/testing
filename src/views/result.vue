@@ -5,7 +5,7 @@
   <div id="app" class="result-view" @touchstart="index = -1">
     <div class="result-box result-title">
       {{result.relateTestScaleName}}
-      <span class="share-result-btn" @click="shareResult" v-if="isAPP"></span>
+      <!-- <span class="share-result-btn" @click="shareResult" v-if="isAPP"></span> -->
     </div>
 
     <div class="result-box pei-image" v-if="result.tsqMessage.qualitativeImage">
@@ -13,7 +13,11 @@
     </div>
 
     <div class="result-box testing-result" :class="{'no-btn': ! isShow}">
-      <h2 class="testing-result-title" v-text="result.relateQualitativeName"></h2>
+      <h2 class="testing-result-title" >
+        <img class="result-title-image" src="../assets/result.png">
+         <p class="testing-result-title-text">测试结果：</p>
+         {{result.relateQualitativeName}}
+      </h2>
 
       <!-- <div class="result-box result-chart" v-if="result.isShowDimensionProfile === 0"> -->
       <div class="result-box result-chart" v-if="result.isShowDimensionProfile === 0">
@@ -24,6 +28,8 @@
           <div class="result-chart-line-wrapper">
             <div class="line" v-for="(item,index) of scoreList" :key="index"></div>
           </div>
+
+          <!-- 柱状图 -->
           <div class="zhu-wrapper">
 
             <ul @touchstart="index = -1" v-if="result.relateDisplayMode === 0">
@@ -69,14 +75,21 @@
       </div>
 
       <div class="testing-result-item" v-if="result.userName">
-        <span>测试人：</span>
+
+        <span class="result-info-title">
+          <img class="result-info-image" src="../assets/tester.png">
+          测试人：
+        </span>
         <p>{{result.userName}} {{result.sex === 'man' ? '男' : '女'}} {{result.birthday | bFormat}}岁</p>
       </div>
       <div class="testing-result-item" v-if="result.tsqMessage.briefIntroduction">
-        <span>简介：</span>
+        <span class="result-info-title">
+          <img class="result-info-image" src="../assets/explain.png">
+          解释：
+        </span>
         <p v-text="result.tsqMessage.briefIntroduction"></p>
       </div>
-      <div class="testing-result-item" v-if="result.tsqMessage.concept">
+      <!-- <div class="testing-result-item" v-if="result.tsqMessage.concept">
         <span>概念解释：</span>
         <p v-text="result.tsqMessage.concept"></p>
       </div>
@@ -87,9 +100,12 @@
       <div class="testing-result-item" v-if="result.tsqMessage.inferiority">
         <span>劣势：</span>
         <p v-text="result.tsqMessage.inferiority"></p>
-      </div>
+      </div> -->
       <div class="testing-result-item" v-if="result.tsqMessage.proposal">
-        <span>分析与建议：</span>
+        <span class="result-info-title">
+          <img class="result-info-image" src="../assets/proposal.png">
+          建议：
+        </span>
         <p v-html="result.tsqMessage.proposal"></p>
       </div>
       <div class="btn-wrapper" v-if="isShow">
@@ -103,7 +119,7 @@
       </div>
     </div>
 
-    <div class="result-box hot-testing" v-if="!self">
+    <!-- <div class="result-box hot-testing" v-if="!self">
       <h2>热门测试</h2>
       <div>
         <ul>
@@ -113,7 +129,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
     <!-- <div class="result-box resulting" v-if="fromBanner">
       <h2>推荐咨询师</h2>
@@ -145,11 +161,11 @@
       </div>
     </div> -->
 
-    <ul class="comment-list" @click="forReply">
+    <!-- <ul class="comment-list" @click="forReply">
       <comment-item :key="item.commentId" :item="item" v-for="item of resultComment.commonCommentList"></comment-item>
-    </ul>
+    </ul> -->
 
-    <comment :payload="payload" :focus="focus" @comment="commentHandler" @blur="blur" v-if="uid"></comment>
+    <!-- <comment :payload="payload" :focus="focus" @comment="commentHandler" @blur="blur" v-if="uid"></comment> -->
   </div>
 </template>
 
@@ -253,7 +269,7 @@ export default {
       }
       this.$store.commit("setUid", parameter.uid);
     }
-    
+
     if (!this.$root.user && this.uid) {
       this.getUserInfo();
     }
@@ -545,7 +561,7 @@ export default {
     },
     async getUserInfo() {
       const data = await getResponseGeneral(
-        "depression/api/getMemberByMid.json",
+        "userOperationCenter/memberWechat/getMemberByMid.json",
         {
           mid: this.uid
         }
