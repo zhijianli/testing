@@ -106,8 +106,8 @@ export default {
      /* background:#20B2AA; */
      background:#FFF;
      position:fixed;
-     left:0;
-     right:0;
+     /* left:0;
+     right:0; */
      bottom:0;
      font-size: .28rem;
      z-index: 999;
