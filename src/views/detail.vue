@@ -321,6 +321,7 @@
 					//如果uid为空，跳转到登录页面
 					this.$router.push(`/login`)
 				}else{
+					// this.$router.push(`/login`)
 				  this.$router.push(`/topic/${this.$route.params.id}`)
 				}
 			},
