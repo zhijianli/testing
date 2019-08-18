@@ -14,6 +14,13 @@
 					已测{{item.numberOfTest}}人
 				</div>
 			</div>
+		<div class="hot-item-price" v-if="item.price > 0">
+			￥{{item.price}}
+		</div>
+		<div class="hot-item-price" v-else>
+			免费
+		</div>
+		    <!--<div class="item-price"></div>-->
 <!-- swiper -->
 
 	</li>
@@ -85,11 +92,18 @@
 	font-size: .26rem;
 }
 .numberOfTest{
-  top:0.2rem;
+    top:0.2rem;
 	padding-left: 0.2rem;
 	font-size:.22rem;
 	color:#EDEDED;
 
+}
+.hot-item-price{
+	position: relative;
+	top: -0.9rem;
+	/*color: #0ba8f0;*/
+	color: #F5B000;
+	font-size:.37rem;
 }
 
 .hot-testing-item:last-child {

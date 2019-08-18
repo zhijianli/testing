@@ -29,10 +29,19 @@
 			<ul class="testing-list">
 				<!-- <testing-item :key="item.id" :item="item" v-for="item of choiceTestingList.slice(0, 3)"> -->
 					<testing-item :key="item.id" :item="item" v-for="item of choiceTestingList">
-					<p class="testing-count" slot="footer">
+					<div class="testing-footer" slot="footer">
+
+						<div class="home-item-price" v-if="item.price > 0">
+							￥{{item.price}}
+						</div>
+						<div class="home-item-price" v-else>
+							免费
+						</div>
+						<div class="testing-count">
 						共{{item.numberOfTitle}}题·{{item.numberOfTest}}人测过
+						</div>
 						<!-- <span>{{item.ping}}评论</span> -->
-					</p>
+					</div>
 				</testing-item>
 			</ul>
 		</div>
@@ -98,7 +107,8 @@
 		},
 		beforeMount() {
 			//测试的时候先写死是12
-			this.$store.state.uid = 12;
+			// this.$store.state.uid = 12;
+            this.$store.state.uid = null;
 			console.log(this.uid+"|||||||||||||||||||||");
 
 			if (this.uid) {

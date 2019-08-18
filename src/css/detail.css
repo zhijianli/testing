@@ -36,13 +36,21 @@
 		font-weight: bold;
 	}
 }
+.detail-info{
+	display: flex;
+}
 .detail-count-info {
 	margin-bottom: .2rem;
 	font-size: .28rem;
-
 	& span {
 		color: #F5B000;
 	}
+}
+.detail-item-price{
+	/*color: #0ba8f0;*/
+	color: #F5B000;
+	font-size: .37rem;
+	padding-right: 3.5rem;
 }
 .apply {
 	color: #A5A5A5;

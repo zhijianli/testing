@@ -88,3 +88,22 @@
 	overflow-y: hidden;
 	display: flex;
 }
+.testing-footer{
+	display: flex;
+}
+.home-item-price{
+	/*color: #0ba8f0;*/
+	color: #F5B000;
+	font-size: .37rem;
+	padding-right: 2rem;
+}
+.testing-count {
+	display: flex;
+	color: #BFBFBF;
+	font-size: .24rem;
+	line-height: .42rem;
+
+& span {
+	  margin-left: auto;
+  }
+}

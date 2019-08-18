@@ -5,10 +5,11 @@
 				<h2 class="line-overflow" v-text="item.name || item.relateTestScaleName"></h2>
 				<p class="line-overflow" v-text="item.abstractStr"></p>
 			</div>
+
 			<img :src="prefix + item.relatePicSrc + suffix" v-if="typeof item.relatePicSrc !== 'undefined'">
 			<img :src="prefix + item.tsiMessage.relatePicSrc + suffix" v-else>
-		</div>
 
+		</div>
 		<slot name="footer"></slot>
 
 
@@ -78,14 +79,5 @@
 		word-break: break-all;
 	}
 }
-.testing-count {
-	display: flex;
-	color: #BFBFBF;
-	font-size: .24rem;
-	line-height: .42rem;
 
-	& span {
-		margin-left: auto;
-	}
-}
 </style>

@@ -104,14 +104,14 @@ export default {
 .wechat-login{
   width:70%;
   height:.75rem;
-  line-height: .75rem;
+  line-height:.75rem;
   align:center;
   margin-top:1.5rem;
   margin-left:15%;
   color:#FFFFFF;
   background:#0ba8f0;
   font-size:.3rem;
-  border-radius: .05rem
+  border-radius:.05rem
 }
 
 </style>

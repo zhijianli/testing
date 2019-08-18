@@ -10,10 +10,19 @@
 		</div>
 		<div class="detail-container" v-if="index === 0">
 			<!-- <h1 v-text="detail.name"></h1> -->
-			<p class="detail-count-info">
+			<div class="detail-info">
+
+				<div class="detail-item-price" v-if="detail.price > 0">
+					￥{{detail.price}}
+				</div>
+				<div class="detail-item-price" v-else>
+					免费
+				</div>
+			    <div class="detail-count-info">
 				共{{detail.numberOfTitle}}题 |
 				<span>{{detail.numberOfTest}}人测过</span>
-			</p>
+				</div>
+			</div>
 			<div class="detail-intro">
 				<h4>测试介绍</h4>
 				<p v-html="detail.description"></p>
