@@ -23,7 +23,7 @@
     "http-proxy-middleware": "^0.17.4",
     "lru-cache": "^4.1.1",
     "mint-ui": "^2.2.13",
-    "node-fetch": "^2.0.0-alpha.9",
+    "node-fetch": "^3.1.1",
     "normalize.css": "^7.0.0",
     "precss": "^2.0.0",
     "route-cache": "0.4.3",
