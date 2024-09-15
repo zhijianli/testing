@@ -9,6 +9,7 @@ axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded
 // const host = 'http://api.120xinmao.com:8000/'  //'http://192.168.0.247:8000/'
  //const host = 'http://192.168.0.247:8000/'  //'http://192.168.0.247:8000/'
  // const host = 'http://127.0.0.1:9000/'
+//  const host = 'http://127.0.0.1:8000/'
  const host = 'http://moluantongxue.com:9000/'
 
 // let urlPrefix = typeof window === "object" ? "/depression-testing/" : host
