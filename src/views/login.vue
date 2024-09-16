@@ -3,12 +3,12 @@
     <!-- <Backbar title="登录"></Backbar> -->
     <div class="input_login">
 
-      <!-- <input type="search" placeholder="用户名" v-model="uname" maxlength="18" autocapitalize="off">
-      <input type="password" placeholder="密码" v-model="pwd" maxlength="18" @keydown.enter="cheack_n_p"> -->
-      <!-- <button @click="cheack_n_p">登录</button> -->
-            <div align="center">  <img class="zhiji-image" src="../assets/zhiji.png"></div>
-            <p class="shijie-text">这个世界并不完美，<br><br>但我们终究可以疗愈自己。</p>
-            <div class="wechat-login">用微信登录，体验更多测试</div>
+         <!--  <input type="search" placeholder="用户名" v-model="uname" maxlength="18" autocapitalize="off">
+      <input type="password" placeholder="密码" v-model="pwd" maxlength="18" @keydown.enter="cheack_n_p"> 
+      <button @click="cheack_n_p">登录</button> -->
+          <div align="center">  <img class="zhiji-image" src="../assets/zhiji.png"></div>
+                <p class="shijie-text">这个世界并不完美，<br><br>但我们终究可以疗愈自己。</p>
+            <div class="wechat-login">用微信登录，体验更多测试</div> 
 
     </div>
 
@@ -38,24 +38,25 @@ export default {
       console.log(error.msg)
     })
   },
-  // mounted () {
-  //   if (this.getLogin) {
-  //     this.$router.replace('/myzone');
-  //   }
-  // },
-  // methods: {
-  //   cheack_n_p () {
-  //     if (this.uname === '' || this.pwd === '') {
-  //       alert('用户名或密码不能为空');
-  //       return;
-  //     }
-  //     if (this.uname !== this.getuname || this.pwd !== this.getpwd) {
-  //       alert('用户名或密码错误');
-  //     } else {
-  //       this.$store.dispatch('setLogin', true);
-  //       this.$router.replace('/myzone');
-  //     }
-  //   }
+//   mounted () {
+//     if (this.getLogin) {
+//       this.$router.replace('/myzone');
+//     }
+//   },
+//   methods: {
+//      cheack_n_p () {
+//        if (this.uname === '' || this.pwd === '') {
+//         alert('用户名或密码不能为空');
+//          return;
+//        }
+   //    if (this.uname !== this.getuname || this.pwd !== this.getpwd) {
+   //    if (this.uname !== "111" || this.pwd !== "111") {
+   //       alert('用户名或密码错误');
+   //     } else {
+   //      this.$store.dispatch('setLogin', true);
+   //      this.$router.replace('/myzone');
+   //    }
+   //  }
   // },
   components: {
     fixednav
