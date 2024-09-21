@@ -147,11 +147,13 @@ export default {
 
 	getProfileData({commit}, id) {
 		return Promise.all([getResponse("orderCenter/testScaleOrder/getTestResultListMessage", {
-			userId: id,
+			// userId: id,
+			userId: 1201259,　//这块id先写死，后续需要改
 			pageIndex: 1,
 			pageSize: 9999
 		}), getResponse("testCenter/testScaleInfo/getCollectionTestList", {
-			mid: id,
+			// mid: id,
+			mid: 1201259, //这块id先写死，后续需要改
 			pageIndex: 1,
 			pageSize: 9999
 		})]).then(([a, b]) => {
