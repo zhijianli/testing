@@ -8,9 +8,9 @@ axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded
 //const isProd = process.env.NODE_ENV === 'production'
 // const host = 'http://api.120xinmao.com:8000/'  //'http://192.168.0.247:8000/'
  //const host = 'http://192.168.0.247:8000/'  //'http://192.168.0.247:8000/'
- const host = 'http://127.0.0.1:9000/'
+//  const host = 'http://127.0.0.1:9000/'
 //  const host = 'http://127.0.0.1:8000/'
-//  const host = 'http://moluantongxue.com:9000/'
+ const host = 'http://review.menganhealth.cn:9000/'
 
 // let urlPrefix = typeof window === "object" ? "/depression-testing/" : host
 //心理测试所有请求前缀
@@ -44,7 +44,7 @@ export function getResponseGeneral(url, params = {}) {
 	// const host = 'http://api.120xinmao.com'  //'http://192.168.0.247:8080'
 	// const host = 'http://192.168.0.247:8080'  //'http://192.168.0.247:8080'
   // const host = 'http://127.0.0.1:8080'
-  const host = 'http://moluantongxue.com:9000/'
+  const host = 'http://review.menganhealth.cn:9000/'
 	// const urlPrefix = typeof window === "object" ? "/" : `${host}/`
   const urlPrefix = host
 

@@ -21,7 +21,7 @@ module.exports = {
     proxyTable: {
         "/depression-api": {
             //  target: "http://127.0.0.1:8000",
-             target: "http://moluantongxue.com:9000",
+             target: "http://review.menganhealth.cn:9000",
             //target: "http://192.168.0.247:8000",
             // target: "http://api.120xinmao.com",
             changeOrigin:true, //是否跨域
