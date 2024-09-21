@@ -62,7 +62,8 @@ export function getResponseGeneral(url, params = {}) {
 export function getResponseGeneralGET(url, params = {}) {
 	// const host = 'http://api.120xinmao.com'  //'http://192.168.0.247:8080'
 	// const host = 'http://192.168.0.247:8080'  //'http://192.168.0.247:8080'
-                 const host = 'http://127.0.0.1:8080'
+    //              const host = 'http://127.0.0.1:8080'
+				const host = 'http://127.0.0.1:9002'
 	const urlPrefix = typeof window === "object" ? "/depression-api/" :	 `${host}/depression-api/`
 
 	return axios.get(urlPrefix + url).then((response) => {

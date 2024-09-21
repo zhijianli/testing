@@ -16,7 +16,7 @@ const config = {
     // host: isProd ? 'api.120xinmao.com' : '192.168.0.247',
     // host: isProd ? 'api.120xinmao.com' : '127.0.0.1',
     host: isProd ? 'moluantongxue.com' : '127.0.0.1',
-    port: isProd ? 80 : 8080
+    port: isProd ? 80 : 9002
   },
   testing: {
     // host: isProd ? 'api.120xinmao.com' : '192.168.0.247',
@@ -180,7 +180,7 @@ app.get('/testing/*', (req, res) => {
   readyPromise.then(() => render(req, res))
 })
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 9002
 
 app.listen(port, () => {
   console.log(`[express] server started at localhost:${port}\n`)
